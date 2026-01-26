@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Workcango</title>
 
   <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
     rel="stylesheet"
-  >
+  />
 
   <!-- Estilos -->
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 
 <body>
@@ -22,49 +22,52 @@
   <!-- =========================
        HEADER
   ========================== -->
-  <header class="header container">
+  <header class="header">
+    <div class="container header-inner">
 
-  <div class="header-left">
-    <div class="logo-text">Workcango</div>
-  </div>
+      <!-- LOGO -->
+      <div class="logo-text">Workcango</div>
 
-  <nav class="header-nav desktop-nav">
-    <a href="#">Atlas IA</a>
-    <a href="#">Marketplace</a>
-    <a href="#">Let's Grow</a>
-    <a href="#">Workademy</a>
-    <a href="#">Conócenos</a>
-  </nav>
+      <!-- NAV DESKTOP -->
+      <nav class="nav-desktop">
+        <a href="#">Atlas IA</a>
+        <a href="#">Marketplace</a>
+        <a href="#">Let's Grow</a>
+        <a href="#">Workademy</a>
+        <a href="#">Conócenos</a>
+      </nav>
 
-  <div class="header-right desktop-actions">
-    <button class="login-btn">Iniciar sesión</button>
-    <button class="register-btn">Regístrate</button>
-  </div>
+      <!-- ACCIONES DESKTOP -->
+      <div class="header-actions">
+        <button class="login-btn">Iniciar sesión</button>
+        <button class="register-btn">Regístrate</button>
+      </div>
 
-  <!-- Botón hamburguesa -->
-  <button class="menu-btn" id="menuBtn">☰</button>
+      <!-- BOTÓN HAMBURGUESA (MOBILE) -->
+      <button class="menu-btn" id="menuBtn" aria-label="Abrir menú">
+        ☰
+      </button>
 
-</header>
-
+    </div>
+  </header>
 
   <!-- =========================
        MENÚ MOBILE
   ========================== -->
   <nav class="mobile-menu" id="mobileMenu">
-  <a href="#">Atlas IA</a>
-  <a href="#">Marketplace</a>
-  <a href="#">Let's Grow</a>
-  <a href="#">Workademy</a>
-  <a href="#">Conócenos</a>
+    <a href="#">Atlas IA</a>
+    <a href="#">Marketplace</a>
+    <a href="#">Let's Grow</a>
+    <a href="#">Workademy</a>
+    <a href="#">Conócenos</a>
 
-  <div class="mobile-actions">
-    <button class="login-btn">Iniciar sesión</button>
-    <button class="register-btn">Regístrate</button>
-  </div>
-</nav>
+    <div class="mobile-actions">
+      <button class="login-btn">Iniciar sesión</button>
+      <button class="register-btn">Regístrate</button>
+    </div>
+  </nav>
 
-
-  <!-- Overlay -->
+  <!-- OVERLAY -->
   <div class="overlay" id="overlay"></div>
 
   <!-- =========================
@@ -72,9 +75,7 @@
   ========================== -->
   <main>
 
-    <!-- =========================
-         HERO
-    ========================== -->
+    <!-- HERO -->
     <section class="hero">
       <div class="hero-overlay">
         <div class="hero-content container">
@@ -87,9 +88,7 @@
       </div>
     </section>
 
-    <!-- =========================
-         CARDS PRINCIPALES
-    ========================== -->
+    <!-- CARDS PRINCIPALES -->
     <section class="knowus-cards container">
       <article class="card">
         <h2>Nuestro propósito</h2>
@@ -108,14 +107,11 @@
       </article>
     </section>
 
-    <!-- =========================
-         SERVICIOS
-    ========================== -->
+    <!-- SERVICIOS -->
     <section class="services container">
       <h2 class="section-title">¿Qué hacemos?</h2>
 
       <div class="services-grid">
-
         <article class="service-card">
           <h3>Talento Digital</h3>
           <p>
@@ -139,49 +135,46 @@
             sin fronteras.
           </p>
         </article>
-
       </div>
     </section>
-
-    <!-- =========================
-     FOOTER
-========================== -->
-<footer class="footer">
-  <div class="footer-container container">
-
-    <div class="footer-brand">
-      <h3>Workcango</h3>
-      <p>
-        Conectamos talento digital con oportunidades reales
-        en todo el mundo.
-      </p>
-    </div>
-
-    <div class="footer-links">
-      <a href="#">Atlas IA</a>
-      <a href="#">Marketplace</a>
-      <a href="#">Let's Grow</a>
-      <a href="#">Workademy</a>
-    </div>
-
-    <div class="footer-social">
-      <a href="#">LinkedIn</a>
-      <a href="#">Instagram</a>
-      <a href="#">YouTube</a>
-    </div>
-
-  </div>
-
-  <div class="footer-bottom">
-    © 2026 Workcango. Todos los derechos reservados.
-  </div>
-</footer>
 
   </main>
 
   <!-- =========================
-       JavaScript
+       FOOTER
   ========================== -->
+  <footer class="footer">
+    <div class="container footer-container">
+
+      <div class="footer-brand">
+        <h3>Workcango</h3>
+        <p>
+          Conectamos talento digital con oportunidades reales
+          en todo el mundo.
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <a href="#">Atlas IA</a>
+        <a href="#">Marketplace</a>
+        <a href="#">Let's Grow</a>
+        <a href="#">Workademy</a>
+      </div>
+
+      <div class="footer-social">
+        <a href="#">LinkedIn</a>
+        <a href="#">Instagram</a>
+        <a href="#">YouTube</a>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      © 2026 Workcango. Todos los derechos reservados.
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
   <script src="js/main.js"></script>
 
 </body>

@@ -1,55 +1,23 @@
-// ================================
-// REFERENCIAS A ELEMENTOS DEL DOM
-// ================================
+const menuBtn = document.getElementById("menuBtn");
+const mobileMenu = document.getElementById("mobileMenu");
+const overlay = document.getElementById("overlay");
 
-const menuBtn = document.getElementById('menuBtn');
-const mobileMenu = document.getElementById('mobileMenu');
-const overlay = document.getElementById('overlay');
-
-// ================================
-// ABRIR / CERRAR MENÚ MOBILE
-// ================================
-
-menuBtn.addEventListener('click', () => {
-  mobileMenu.classList.toggle('active');
-  overlay.classList.toggle('active');
+// Abrir / cerrar menú
+menuBtn.addEventListener("click", () => {
+  mobileMenu.classList.toggle("active");
+  overlay.classList.toggle("active");
 });
 
-// ================================
-// CERRAR MENÚ AL HACER CLICK FUERA
-// ================================
-
-overlay.addEventListener('click', () => {
-  closeMenu();
+// Cerrar al tocar el fondo oscuro
+overlay.addEventListener("click", () => {
+  mobileMenu.classList.remove("active");
+  overlay.classList.remove("active");
 });
 
-// ================================
-// CERRAR MENÚ AL HACER CLICK EN LINK
-// ================================
-
-const menuLinks = document.querySelectorAll('.mobile-menu a');
-
-menuLinks.forEach(link => {
-  link.addEventListener('click', () => {
-    closeMenu();
+// Cerrar al tocar un link
+document.querySelectorAll(".mobile-menu a").forEach(link => {
+  link.addEventListener("click", () => {
+    mobileMenu.classList.remove("active");
+    overlay.classList.remove("active");
   });
 });
-
-// ================================
-// CERRAR MENÚ CON TECLA ESC
-// ================================
-
-document.addEventListener('keydown', (event) => {
-  if (event.key === 'Escape') {
-    closeMenu();
-  }
-});
-
-// ================================
-// FUNCIÓN CENTRALIZADA
-// ================================
-
-function closeMenu() {
-  mobileMenu.classList.remove('active');
-  overlay.classList.remove('active');
-}

@@ -29,11 +29,14 @@ body {
    HEADER
 ========================= */
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 16px;
   background: #f4f7ff;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
 }
 
 .logo-text {
@@ -42,6 +45,25 @@ body {
   color: #2c3773;
 }
 
+/* NAV DESKTOP */
+.nav-desktop {
+  display: none;
+  gap: 24px;
+}
+
+.nav-desktop a {
+  text-decoration: none;
+  color: #2c3773;
+  font-weight: 500;
+}
+
+/* ACCIONES DESKTOP */
+.header-actions {
+  display: none;
+  gap: 12px;
+}
+
+/* BOTÓN HAMBURGUESA */
 .menu-btn {
   font-size: 22px;
   background: #2c3773;
@@ -81,9 +103,14 @@ body {
   font-weight: 500;
 }
 
-/* =========================
-   BOTONES
-========================= */
+.mobile-actions {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* BOTONES */
 .login-btn,
 .register-btn {
   padding: 12px;
@@ -95,12 +122,10 @@ body {
 
 .login-btn {
   background: #2c3773;
-  margin-top: 20px;
 }
 
 .register-btn {
   background: #7d93ff;
-  margin-top: 10px;
 }
 
 /* =========================
@@ -122,7 +147,7 @@ body {
 }
 
 /* =========================
-   HERO (BASE – PASO 11 SE COMPLETA)
+   HERO
 ========================= */
 .hero {
   height: 80vh;
@@ -130,8 +155,6 @@ body {
   background-size: cover;
   background-position: center;
   position: relative;
-  display: flex;
-  align-items: center;
 }
 
 .hero-overlay {
@@ -140,28 +163,6 @@ body {
   background: rgba(0, 0, 0, 0.55);
   display: flex;
   align-items: center;
-  width: 100%;
-}
-
-/* =========================
-   HERO CONTENIDO
-========================= */
-.hero-content {
-  text-align: center;
-  color: white;
-}
-
-.hero-title {
-  font-size: 36px;
-  font-weight: 700;
-  margin-bottom: 16px;
-}
-
-.hero-description {
-  font-size: 16px;
-  line-height: 1.7;
-  max-width: 520px;
-  margin: 0 auto;
 }
 
 .hero-content {
@@ -189,8 +190,7 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   gap: 24px;
-  margin-top: 64px;
-  margin-bottom: 96px;
+  margin: 64px auto 96px;
 }
 
 .card {
@@ -229,78 +229,25 @@ body {
 }
 
 /* =========================
-   DESKTOP
-========================= */
-@media (min-width: 1024px) {
-
-  .menu-btn {
-    display: none;
-  }
-
-  .mobile-menu {
-    position: static;
-    flex-direction: row;
-    height: auto;
-    background: transparent;
-    padding: 0;
-    gap: 24px;
-  }
-
-  .mobile-menu a {
-    border: none;
-  }
-
-  .overlay {
-    display: none;
-  }
-
-  .knowus-cards {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .hero-title {
-    font-size: 48px;
-  }
-
-  .hero-description {
-    font-size: 18px;
-  }
-}
-
-/* =========================
-   HERO DESKTOP
-========================= */
-@media (min-width: 1024px) {
-  .hero {
-    height: 90vh;
-    background-image: url("../img/hero-desktop.jpg");
-    background-position: center top;
-  }
-}
-
-/* =========================
-   SERVICIOS
+   SERVICES
 ========================= */
 .services {
-  margin-bottom: 120px;
   text-align: center;
+  margin-bottom: 120px;
 }
 
 .section-title {
   font-size: 32px;
   font-weight: 700;
   margin-bottom: 48px;
-  color: #1f2937;
 }
 
-/* GRID */
 .services-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 24px;
 }
 
-/* CARD */
 .service-card {
   background: white;
   padding: 32px;
@@ -309,31 +256,9 @@ body {
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.service-card h3 {
-  font-size: 20px;
-  margin-bottom: 12px;
-}
-
-.service-card p {
-  font-size: 15px;
-  line-height: 1.7;
-  color: #4b5563;
-}
-
 .service-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 20px 48px rgba(0, 0, 0, 0.12);
-}
-
-/* DESKTOP */
-@media (min-width: 1024px) {
-  .services-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .section-title {
-    font-size: 40px;
-  }
 }
 
 /* =========================
@@ -341,105 +266,51 @@ body {
 ========================= */
 .footer {
   background: #1f2937;
-  color: #ffffff;
+  color: white;
   padding: 64px 16px 24px;
 }
 
 .footer-container {
   display: grid;
-  grid-template-columns: 1fr;
   gap: 32px;
-  margin-bottom: 32px;
-}
-
-.footer-brand h3 {
-  font-size: 22px;
-  margin-bottom: 12px;
-}
-
-.footer-brand p {
-  font-size: 14px;
-  line-height: 1.6;
-  color: #d1d5db;
-}
-
-.footer-links,
-.footer-social {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.footer-links a,
-.footer-social a {
-  color: #e5e7eb;
-  text-decoration: none;
-  font-size: 14px;
-}
-
-.footer-links a:hover,
-.footer-social a:hover {
-  color: #7d93ff;
 }
 
 .footer-bottom {
   text-align: center;
   font-size: 13px;
   color: #9ca3af;
-  border-top: 1px solid #374151;
-  padding-top: 16px;
-}
-
-/* Desktop */
-@media (min-width: 768px) {
-  .footer-container {
-    grid-template-columns: repeat(3, 1fr);
-  }
+  margin-top: 24px;
 }
 
 /* =========================
-   HEADER RESPONSIVE (FIX)
+   DESKTOP
 ========================= */
-
-/* Header layout */
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-/* Navegación desktop */
-.desktop-nav {
-  display: none;
-  gap: 24px;
-}
-
-/* Acciones desktop (login / registro) */
-.desktop-actions {
-  display: none;
-  gap: 12px;
-}
-
-/* Botón hamburguesa visible en mobile */
-.menu-btn {
-  display: block;
-}
-
-/* Desktop */
 @media (min-width: 1024px) {
+
   .menu-btn {
     display: none;
   }
 
-  .desktop-nav {
+  .nav-desktop,
+  .header-actions {
     display: flex;
   }
 
-  .desktop-actions {
-    display: flex;
-  }
-
-  .mobile-menu {
+  .mobile-menu,
+  .overlay {
     display: none;
+  }
+
+  .hero {
+    height: 90vh;
+    background-image: url("../img/hero-desktop.jpg");
+  }
+
+  .knowus-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
