@@ -1,0 +1,398 @@
+/* =========================
+   RESET
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =========================
+   BODY
+========================= */
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background: #f3f6fb;
+  color: #1f2937;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* =========================
+   HEADER
+========================= */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  background: #f4f7ff;
+}
+
+.logo-text {
+  font-size: 20px;
+  font-weight: 700;
+  color: #2c3773;
+}
+
+.menu-btn {
+  font-size: 22px;
+  background: #2c3773;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+/* =========================
+   MENÚ MOBILE
+========================= */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 80%;
+  height: 100vh;
+  background: white;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  transition: right 0.3s ease;
+  z-index: 1000;
+}
+
+.mobile-menu.active {
+  right: 0;
+}
+
+.mobile-menu a {
+  text-decoration: none;
+  color: #333;
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+  font-weight: 500;
+}
+
+/* =========================
+   BOTONES
+========================= */
+.login-btn,
+.register-btn {
+  padding: 12px;
+  border-radius: 20px;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.login-btn {
+  background: #2c3773;
+  margin-top: 20px;
+}
+
+.register-btn {
+  background: #7d93ff;
+  margin-top: 10px;
+}
+
+/* =========================
+   OVERLAY
+========================= */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  z-index: 900;
+}
+
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* =========================
+   HERO (BASE – PASO 11 SE COMPLETA)
+========================= */
+.hero {
+  height: 80vh;
+  background-image: url("../img/hero-mobile.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+/* =========================
+   HERO CONTENIDO
+========================= */
+.hero-content {
+  text-align: center;
+  color: white;
+}
+
+.hero-title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.hero-description {
+  font-size: 16px;
+  line-height: 1.7;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.hero-content {
+  text-align: center;
+  color: white;
+}
+
+.hero-title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.hero-description {
+  font-size: 16px;
+  line-height: 1.7;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+/* =========================
+   CARDS
+========================= */
+.knowus-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  margin-top: 64px;
+  margin-bottom: 96px;
+}
+
+.card {
+  background: white;
+  padding: 32px;
+  border-radius: 20px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+  position: relative;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 6px;
+  width: 100%;
+  background: linear-gradient(90deg, #2c3773, #7d93ff);
+}
+
+.card h2 {
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+.card p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #4b5563;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.12);
+}
+
+/* =========================
+   DESKTOP
+========================= */
+@media (min-width: 1024px) {
+
+  .menu-btn {
+    display: none;
+  }
+
+  .mobile-menu {
+    position: static;
+    flex-direction: row;
+    height: auto;
+    background: transparent;
+    padding: 0;
+    gap: 24px;
+  }
+
+  .mobile-menu a {
+    border: none;
+  }
+
+  .overlay {
+    display: none;
+  }
+
+  .knowus-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero-title {
+    font-size: 48px;
+  }
+
+  .hero-description {
+    font-size: 18px;
+  }
+}
+
+/* =========================
+   HERO DESKTOP
+========================= */
+@media (min-width: 1024px) {
+  .hero {
+    height: 90vh;
+    background-image: url("../img/hero-desktop.jpg");
+    background-position: center top;
+  }
+}
+
+/* =========================
+   SERVICIOS
+========================= */
+.services {
+  margin-bottom: 120px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 48px;
+  color: #1f2937;
+}
+
+/* GRID */
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+/* CARD */
+.service-card {
+  background: white;
+  padding: 32px;
+  border-radius: 20px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.service-card h3 {
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.service-card p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #4b5563;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.12);
+}
+
+/* DESKTOP */
+@media (min-width: 1024px) {
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .section-title {
+    font-size: 40px;
+  }
+}
+
+/* =========================
+   FOOTER
+========================= */
+.footer {
+  background: #1f2937;
+  color: #ffffff;
+  padding: 64px 16px 24px;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  margin-bottom: 32px;
+}
+
+.footer-brand h3 {
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+.footer-brand p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #d1d5db;
+}
+
+.footer-links,
+.footer-social {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-links a,
+.footer-social a {
+  color: #e5e7eb;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-links a:hover,
+.footer-social a:hover {
+  color: #7d93ff;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 13px;
+  color: #9ca3af;
+  border-top: 1px solid #374151;
+  padding-top: 16px;
+}
+
+/* Desktop */
+@media (min-width: 768px) {
+  .footer-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
