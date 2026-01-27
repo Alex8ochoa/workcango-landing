@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Workcango</title>
 
+  <link rel="shortcut icon" href="./img/logo pagina.png" type="image/x-icon">
+
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,169 +15,233 @@
     rel="stylesheet"
   />
 
-  <!-- Estilos -->
+  <!-- CSS -->
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 
 <body>
 
-  <!-- =========================
-       HEADER
-  ========================== -->
-  <header class="header">
-    <div class="container header-inner">
+<!-- =========================
+     HEADER
+========================== -->
+<header class="header">
+  <div class="container header-inner">
 
-      <!-- LOGO -->
-      <div class="logo-text">Workcango</div>
+    <img src="./img/logo-workcango.png" alt="Workcango" class="logo">
 
-      <!-- NAV DESKTOP -->
-      <nav class="nav-desktop">
-        <a href="#">Atlas IA</a>
-        <a href="#">Marketplace</a>
-        <a href="#">Let's Grow</a>
-        <a href="#">Workademy</a>
-        <a href="#">Conócenos</a>
-      </nav>
+    <nav class="nav-desktop">
+      <a href="#">Atlas IA</a>
+      <a href="#">Marketplace <span class="arrow">›</span></a>
+      <a href="#">Let's Grow</a>
+      <a href="#">Workademy</a>
+      <a href="#">Conócenos</a>
+    </nav>
 
-      <!-- ACCIONES DESKTOP -->
-      <div class="header-actions">
-        <button class="login-btn">Iniciar sesión</button>
-        <button class="register-btn">Regístrate</button>
-      </div>
-
-      <!-- BOTÓN HAMBURGUESA (MOBILE) -->
-      <button class="menu-btn" id="menuBtn" aria-label="Abrir menú">
-        ☰
-      </button>
-
-    </div>
-  </header>
-
-  <!-- =========================
-       MENÚ MOBILE
-  ========================== -->
-  <nav class="mobile-menu" id="mobileMenu">
-    <a href="#">Atlas IA</a>
-    <a href="#">Marketplace</a>
-    <a href="#">Let's Grow</a>
-    <a href="#">Workademy</a>
-    <a href="#">Conócenos</a>
-
-    <div class="mobile-actions">
+    <div class="header-actions">
       <button class="login-btn">Iniciar sesión</button>
       <button class="register-btn">Regístrate</button>
     </div>
-  </nav>
 
-  <!-- OVERLAY -->
-  <div class="overlay" id="overlay"></div>
+    <button class="menu-btn" id="menuBtn" aria-label="Abrir menú">☰</button>
+  </div>
+</header>
 
-  <!-- =========================
-       CONTENIDO PRINCIPAL
-  ========================== -->
-  <main>
+<!-- MENÚ MOBILE -->
+<nav class="mobile-menu" id="mobileMenu">
+  <a href="#">Atlas IA</a>
+  <a href="#">Marketplace ›</a>
+  <a href="#">Let's Grow</a>
+  <a href="#">Workademy</a>
+  <a href="#">Conócenos</a>
 
-    <!-- HERO -->
-    <section class="hero">
-      <div class="hero-overlay">
-        <div class="hero-content container">
-          <h1 class="hero-title">Bienvenido a Workcango</h1>
-          <p class="hero-description">
-            Conectamos empresas con empleados digitales especializados
-            para impulsar su crecimiento.
-          </p>
+  <div class="mobile-actions">
+    <button class="login-btn">Iniciar sesión</button>
+    <button class="register-btn">Regístrate</button>
+  </div>
+</nav>
+
+<div class="overlay" id="overlay"></div>
+
+<!-- =========================
+     MAIN
+========================== -->
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-overlay">
+      <div class="hero-box">
+        <h1>Bienvenido a la comunidad Workcango</h1>
+        <h2>¡Hola y bienvenido!</h2>
+        <p>
+          En Workcango creemos que cada persona, idea y esfuerzo tiene el poder
+          de transformar el mundo. Gracias por estar aquí y formar parte de una
+          comunidad comprometida con la evolución humana a través de la
+          inclusión, la innovación y la colaboración.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MISIÓN / VISIÓN / PROPÓSITO (ÚNICA Y CORRECTA) -->
+  <section class="mvp container">
+
+    <div class="mvp-grid">
+
+      <article class="mvp-card">
+        <h3>🎯 Misión</h3>
+        <p>
+          Impulsar el desarrollo personal y profesional de individuos y
+          organizaciones, creando conexiones significativas que generen
+          un impacto positivo y duradero.
+        </p>
+      </article>
+
+      <article class="mvp-card">
+        <h3>🚀 Visión</h3>
+        <p>
+          Construir una red global donde la diversidad, la equidad y la
+          creatividad sean las bases de un futuro sostenible y humano.
+        </p>
+      </article>
+
+    </div>
+
+    <article class="mvp-card full">
+      <h3>💡 Nuestro Propósito</h3>
+      <p>
+        Somos una plataforma de conexión y crecimiento. Trabajamos día a día
+        por una sociedad más inclusiva, empática y libre, donde cada voz importa
+        y cada paso nos lleva hacia una evolución colectiva.
+      </p>
+    </article>
+
+  </section>
+
+  <section class="team">
+  <div class="container">
+
+    <h2 class="team-title">Nuestro Equipo</h2>
+
+    <div class="team-grid">
+
+      <img
+        src="img/Julia Florez Gonzalez.jpeg"
+        alt="Julia Florez Gonzalez"
+        class="team-photo"
+      >
+
+      <div class="team-info">
+        <h3>Julia Florez Gonzalez</h3>
+        <div class="team-role">
+          Fundadora y gerente general de Workcango
         </div>
-      </div>
-    </section>
 
-    <!-- CARDS PRINCIPALES -->
-    <section class="knowus-cards container">
-      <article class="card">
-        <h2>Nuestro propósito</h2>
         <p>
-          Crear conexiones reales entre empresas y talento digital,
-          promoviendo relaciones laborales confiables y de calidad.
+          Julia Flórez es fundadora y gerente general de Workcango, una
+          plataforma innovadora que redefine la forma en que las personas
+          se conectan globalmente. Con una visión clara de transformar
+          el futuro empresarial y laboral, Julia ha liderado la creación
+          de un ecosistema que promueve la flexibilidad, la inclusión y
+          la productividad sin fronteras.
         </p>
-      </article>
 
-      <article class="card">
-        <h2>Nuestra visión</h2>
         <p>
-          Ser una plataforma líder en la conexión de talento digital
-          con empresas en crecimiento.
+          Su trayectoria combina una sólida experiencia en gestión
+          empresarial con una profunda pasión por los procesos
+          tecnológicos. Bajo su liderazgo, Workcango ha crecido como
+          un referente en soluciones para nómadas digitales, empresas
+          y talentos, promoviendo modelos comerciales sostenibles y
+          adaptados a los desafíos del siglo XXI.
         </p>
-      </article>
-    </section>
-
-    <!-- SERVICIOS -->
-    <section class="services container">
-      <h2 class="section-title">¿Qué hacemos?</h2>
-
-      <div class="services-grid">
-        <article class="service-card">
-          <h3>Talento Digital</h3>
-          <p>
-            Conectamos empresas con profesionales digitales
-            verificados a nivel global.
-          </p>
-        </article>
-
-        <article class="service-card">
-          <h3>Mentoría</h3>
-          <p>
-            Acompañamiento estratégico para emprendedores,
-            startups y equipos remotos.
-          </p>
-        </article>
-
-        <article class="service-card">
-          <h3>Comunidad</h3>
-          <p>
-            Una red global para aprender, crecer y colaborar
-            sin fronteras.
-          </p>
-        </article>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- =========================
-       FOOTER
-  ========================== -->
-  <footer class="footer">
-    <div class="container footer-container">
-
-      <div class="footer-brand">
-        <h3>Workcango</h3>
-        <p>
-          Conectamos talento digital con oportunidades reales
-          en todo el mundo.
-        </p>
-      </div>
-
-      <div class="footer-links">
-        <a href="#">Atlas IA</a>
-        <a href="#">Marketplace</a>
-        <a href="#">Let's Grow</a>
-        <a href="#">Workademy</a>
-      </div>
-
-      <div class="footer-social">
-        <a href="#">LinkedIn</a>
-        <a href="#">Instagram</a>
-        <a href="#">YouTube</a>
       </div>
 
     </div>
+  </div>
+</section>
 
-    <div class="footer-bottom">
-      © 2026 Workcango. Todos los derechos reservados.
+  <!-- SERVICIOS -->
+  <section class="services container">
+    <h2 class="section-title">¿Qué hacemos?</h2>
+
+    <div class="services-grid">
+
+      <article class="service-card">
+        <img src="img/talento-digital.png" class="service-icon" alt="Talento Digital">
+        <h3>Talento Digital</h3>
+        <p>Conectamos empresas con profesionales digitales verificados a nivel global.</p>
+      </article>
+
+      <article class="service-card">
+        <img src="img/mentoria.png" class="service-icon" alt="Mentoría">
+        <h3>Mentoría</h3>
+        <p>Acompañamiento estratégico para emprendedores y startups.</p>
+      </article>
+
+      <article class="service-card">
+        <img src="img/comunidad.png" class="service-icon" alt="Comunidad">
+        <h3>Comunidad</h3>
+        <p>Una red global para aprender, crecer y colaborar.</p>
+      </article>
+
     </div>
-  </footer>
+  </section>
 
-  <!-- JavaScript -->
-  <script src="js/main.js"></script>
+  <!-- PRENSA -->
+  <section class="press container">
+    <h2 class="section-title">En la Prensa</h2>
+    <ul>
+      <li><a href="#">El Tiempo</a></li>
+      <li><a href="#">Semana</a></li>
+      <li><a href="#">Portafolio</a></li>
+      <li><a href="#">Pulzo</a></li>
+    </ul>
+  </section>
 
+  <!-- VIDEO -->
+  <section class="video container">
+    <iframe
+      width="100%"
+      height="500"
+      src="https://www.youtube.com/embed/DW23IoxqUtM"
+      frameborder="0"
+      allowfullscreen>
+    </iframe>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container footer-container">
+
+    <div>
+      <h3>Workcango</h3>
+      <p>Conectamos talento digital con oportunidades reales.</p>
+    </div>
+
+    <div>
+      <a href="#">Atlas IA</a>
+      <a href="#">Marketplace</a>
+      <a href="#">Let's Grow</a>
+      <a href="#">Workademy</a>
+    </div>
+
+    <div>
+      <a href="#">LinkedIn</a>
+      <a href="#">Instagram</a>
+      <a href="#">YouTube</a>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 Workcango. Todos los derechos reservados.
+  </div>
+</footer>
+
+<div class="chatbot">💬</div>
+
+<script src="js/main.js"></script>
 </body>
 </html>
