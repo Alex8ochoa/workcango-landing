@@ -486,3 +486,59 @@ body {
     margin-bottom: 12px;
   }
 }
+
+/* =========================
+   BOTÓN LINKEDIN EQUIPO
+========================= */
+.team-role {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.linkedin-btn {
+  background: #0a66c2; /* Azul LinkedIn */
+  color: white;
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.2s ease;
+}
+
+.linkedin-btn:hover {
+  background: #004182;
+}
+
+/* =========================
+   LINKEDIN ICONO EQUIPO
+========================= */
+.team-role {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.linkedin-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 22px;
+  height: 22px;
+
+  background: #0a66c2;       /* Azul oficial LinkedIn */
+  border-radius: 5px;        /* Cuadrado moderno (no círculo) */
+
+  margin-left: 6px;
+  position: relative;
+  top: 8px;                  /* 👈 baja TODO el botón */
+}
+
+.linkedin-btn img {
+  width: 14px;
+  height: 14px;
+  display: block;
+}
